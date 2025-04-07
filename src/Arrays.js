@@ -4,10 +4,7 @@
   разделенными запятыми.
 */
 export function arraySorting(data) {
-    return data
-        .split(',')
-        .sort((a, b) => a - b)
-        .toString();
+    return data.split(',').sort((a, b) => a - b).toString();
 }
 
 /*
@@ -16,9 +13,7 @@ export function arraySorting(data) {
   были бы удалены из массива, и верните его в качестве результата функции.
 */
 export function arrayFiltering(data) {
-    return data.filter((value) => {
-        return value < 100;
-    });
+    return data.filter((value) => {return value < 100;});
 }
 
 /*
@@ -27,8 +22,5 @@ export function arrayFiltering(data) {
   значения из первых двух массивов, и верните его в качестве результата функции.
 */
 export function arrayPushing(array1, array2) {
-    return array1.reduce(
-        (acc, val, index) => acc.concat(val, array2[index]),
-        [],
-    );
+    return array1.reduce((acc, val, index) => acc.concat(val, array2[index]),[],);
 }
